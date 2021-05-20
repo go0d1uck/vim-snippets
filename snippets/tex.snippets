@@ -144,6 +144,11 @@ snippet sec \section
 	\\section{${1:section name}}%
 	\\label{sec:${2:$1}}
 	${0}
+
+# Section without label
+snippet secm \section without label
+	\\section{${1:section anme}}
+
 # Section without number
 snippet sec* \section*
 	\\section*{${1:section name}}%
@@ -432,16 +437,18 @@ snippet utf8 utf8
 
 # Chinese ctex
 snippet ctex ctexart
-	\documentclass[UTF8]{ctexart}
+	\documentclass[UTF8,fontset=founder]{ctexart}
 
 # tad
-snippet start title&author&date
-	\title{$0}
-	\author{$1}
+snippet tad title&author&date
+	\title{$1}
+	\author{$2}
 	\date{\today}
-	$2
+	$3
 
 # bib
 snippet bibstyle bibliographystyle
 	\bibliographystyle{$1}
 	$2
+
+# 
