@@ -437,7 +437,7 @@ snippet utf8 utf8
 
 # Chinese ctex
 snippet ctex ctexart
-	\documentclass[UTF8,fontset=founder]{ctexart}
+	\documentclass{ctexart}
 
 # tad
 snippet tad title&author&date
@@ -451,4 +451,10 @@ snippet bibstyle bibliographystyle
 	\bibliographystyle{$1}
 	$2
 
-# 
+# img
+snippet img "insert img"
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=$1]{$2}
+		\caption{$3}\label{$4}
+	\end{figure}
